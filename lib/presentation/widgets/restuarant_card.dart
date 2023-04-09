@@ -98,7 +98,7 @@ class RestuarantCard extends StatelessWidget {
         style: const TextStyle(
           fontSize: 14,
           fontWeight: FontWeight.bold,
-          color: Color.fromARGB(135, 114, 111, 111),
+          color: Color.fromRGBO(14, 162, 147, 0.6),
         ),
       ),
     );
@@ -115,7 +115,7 @@ class RestuarantCard extends StatelessWidget {
         style: const TextStyle(
           fontSize: 14,
           fontWeight: FontWeight.bold,
-          color: Color.fromARGB(135, 114, 111, 111),
+          color: Colors.cyanAccent,
         ),
       ),
     );
@@ -144,7 +144,7 @@ class _CardContent extends StatelessWidget {
                 fontSize: 18,
                 height: 0.7,
                 fontWeight: FontWeight.bold,
-                color: Theme.of(context).colorScheme.background,
+                color: Theme.of(context).accentColor,
               ),
               maxLines: 1,
               overflow: TextOverflow.ellipsis,

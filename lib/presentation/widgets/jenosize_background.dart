@@ -46,10 +46,9 @@ class JenosizeBackground extends StatelessWidget {
                 image: AppImages.jenosizeic,
                 width: jenoSize,
                 height: jenoSize,
-
-                // color: !isDark
-                //     ? AppColors.whiteGrey
-                //     : Colors.black.withOpacity(0.05),
+                color: !isDark
+                    ? AppColors.whiteGrey
+                    : Colors.black.withOpacity(0.05),
               ),
             ),
           ),

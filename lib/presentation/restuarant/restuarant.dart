@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jenosize/presentation/restuarant/sections/restaurant_list_fix.dart';
+import 'package:jenosize/presentation/widgets/jenosize_background.dart';
 
 class RestuarantPage extends StatefulWidget {
   const RestuarantPage({super.key});
@@ -11,10 +12,12 @@ class RestuarantPage extends StatefulWidget {
 class _RestuarantPageState extends State<RestuarantPage> {
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: const [
-        RestuarantListFix(),
-      ],
+    return JenosizeBackground(
+      child: Stack(
+        children: const [
+          RestuarantListFix(),
+        ],
+      ),
     );
     // Column(
     //   mainAxisAlignment: MainAxisAlignment.center,
