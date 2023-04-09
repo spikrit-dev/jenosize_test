@@ -6,7 +6,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:jenosize/application/restaurant/restuarant_bloc.dart';
 import 'package:jenosize/application/restaurant/restuarant_selector.dart';
 import 'package:jenosize/application/search/search_bloc.dart';
-import 'package:jenosize/application/search/search_selector.dart';
 import 'package:jenosize/configs/images.dart';
 import 'package:jenosize/domain/entities/restuarant.dart';
 import 'package:jenosize/presentation/widgets/main_app_bar.dart';
