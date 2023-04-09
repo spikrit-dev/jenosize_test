@@ -1,16 +1,30 @@
-# jenosize
+<h1 align="left">Hey 👋 What's up?</h1>
 
-A new Flutter project.
+###
 
-## Getting Started
+<p align="left">Search leading 50 restaurant around the world, Ranked by  Zomato. and maps</p>
 
-This project is a starting point for a Flutter application.
+###
 
-A few resources to get you started if this is your first Flutter project:
+<h2 align="left">About this app</h2>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+###
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<p align="left">🔍 Find 50 restaurants<br>📍 Specify the location (Jenosize Digital Group)<br>♻️ Reusable widgets</p>
+
+###
+
+<h2 align="left">Tech Stack</h2>
+
+###
+
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" height="40" width="52" alt="dart logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" height="40" width="52" alt="flutter logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" height="40" width="52" alt="figma logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" height="40" width="52" alt="googlecloud logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" width="52" alt="git logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitter/gitter-plain.svg" height="40" width="52" alt="gitter logo"  />
+</div>
+
+###
