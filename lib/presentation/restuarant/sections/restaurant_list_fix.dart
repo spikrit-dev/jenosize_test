@@ -5,6 +5,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:jenosize/application/restaurant/restuarant_bloc.dart';
 import 'package:jenosize/application/restaurant/restuarant_selector.dart';
+import 'package:jenosize/application/search/search_bloc.dart';
+import 'package:jenosize/application/search/search_selector.dart';
 import 'package:jenosize/configs/images.dart';
 import 'package:jenosize/domain/entities/restuarant.dart';
 import 'package:jenosize/presentation/widgets/main_app_bar.dart';
@@ -26,6 +28,7 @@ class RestuarantListFixState extends State<RestuarantListFix> {
   final GlobalKey<NestedScrollViewState> _scrollKey = GlobalKey();
 
   RestuarantBloc get restuarantBloc => context.read<RestuarantBloc>();
+  SearchBloc get searchBloc => context.read<SearchBloc>();
 
   @override
   void initState() {
@@ -59,7 +62,9 @@ class RestuarantListFixState extends State<RestuarantListFix> {
     }
   }
 
-  void _onFilter(String enteredKeyWord) {}
+  void _onFilter(String enteredKeyWord) {
+    searchBloc.add(SearchLoadStarted(enterInput: enteredKeyWord));
+  }
 
   Future _onRefresh() async {
     restuarantBloc.add(const RestuarantLoadStarted());
@@ -86,6 +91,24 @@ class RestuarantListFixState extends State<RestuarantListFix> {
         ),
         SearchBarSilver(onChanged: _onFilter),
       ],
+      // body: SearchStateStatusSelector((status) {
+      //   switch (status) {
+      //     case SearchStateStatus.searching:
+      //       return _buildLoading();
+
+      //     case SearchStateStatus.searchSuccess:
+      //     case SearchStateStatus.searchingMore:
+      //     case SearchStateStatus.searchingMoreSuccess:
+      //       return _buildList();
+
+      //     case SearchStateStatus.searchFailure:
+      //     case SearchStateStatus.searchingMoreFailure:
+      //       return _buildError();
+
+      //     default:
+      //       return Container();
+      //   }
+      // }),
       body: RestuarantStateStatusSelector((status) {
         switch (status) {
           case RestuarantStateStatus.loading:
@@ -119,7 +142,9 @@ class RestuarantListFixState extends State<RestuarantListFix> {
         RestuarantRefreshControl(onRefresh: _onRefresh),
         SliverPadding(
           padding: const EdgeInsets.all(28),
-          sliver: NumberOfRestuarantsSelector((numberOfRestuarants) {
+          sliver:
+              // NumberOfRestuarantsSearchSelector((numberOfRestuarantsSearch) {
+              NumberOfRestuarantsSelector((numberOfRestuarants) {
             return SliverGrid(
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 1,
@@ -129,6 +154,7 @@ class RestuarantListFixState extends State<RestuarantListFix> {
               ),
               delegate: SliverChildBuilderDelegate(
                 (_, index) {
+                  // return RestuarantSearchSelector(index, (restuarant, _) {
                   return RestuarantSelector(index, (restuarant, _) {
                     return RestuarantCard(
                       restuarant,
@@ -137,6 +163,7 @@ class RestuarantListFixState extends State<RestuarantListFix> {
                   });
                 },
                 childCount: numberOfRestuarants,
+                // childCount: numberOfRestuarantsSearch,
               ),
             );
           }),

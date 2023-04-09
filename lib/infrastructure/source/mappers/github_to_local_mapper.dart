@@ -1,4 +1,3 @@
-import 'package:jenosize/infrastructure/source/github/models/restuarant.dart';
 import 'package:jenosize/infrastructure/source/local/models/restuarant.dart';
 
 import '../github/models/res_model.dart';
