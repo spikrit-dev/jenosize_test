@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:jenosize/app.dart';
-import 'package:jenosize/application/bloc/restuarant_bloc.dart';
+import 'package:jenosize/application/restaurant/restuarant_bloc.dart';
 import 'package:jenosize/core/network.dart';
 import 'package:jenosize/infrastructure/repositories/restaurant_repository_fix.dart';
 import 'package:jenosize/infrastructure/source/github/github_datasource.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:jenosize/application/bloc/restuarant_bloc.dart';
+import 'package:jenosize/application/restaurant/restuarant_bloc.dart';
 import 'package:jenosize/domain/entities/restuarant.dart';
 // import 'package:pokedex/domain/entities/pokemon.dart';
 // import 'package:pokedex/states/pokemon/pokemon_bloc.dart';

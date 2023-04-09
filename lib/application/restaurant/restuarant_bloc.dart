@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
-import 'package:jenosize/domain/entities/restuarant.dart';
 import 'package:stream_transform/stream_transform.dart';
+
+import 'package:jenosize/domain/entities/restuarant.dart';
 
 import '../../infrastructure/repositories/restaurant_repository_fix.dart';
 

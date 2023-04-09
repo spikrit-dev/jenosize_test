@@ -1,8 +1,8 @@
+import 'package:jenosize/domain/entities/restuarant.dart';
+import 'package:jenosize/infrastructure/source/github/github_datasource.dart';
+import 'package:jenosize/infrastructure/source/local/local_datasource.dart';
 import 'package:jenosize/infrastructure/source/mappers/github_to_local_mapper.dart';
 import 'package:jenosize/infrastructure/source/mappers/local_to_entity_mapper.dart';
-import '../../domain/entities/restuarant.dart';
-import '../source/github/github_datasource.dart';
-import '../source/local/local_datasource.dart';
 
 abstract class RestuarantRepositoryFix {
   Future<List<Restuarant>> getAllRestuarants();
@@ -43,8 +43,10 @@ class RestuarantDefaultRepositoryFix extends RestuarantRepositoryFix {
   }
 
   @override
-  Future<List<Restuarant>> getRestuarants(
-      {required int limit, required int page}) async {
+  Future<List<Restuarant>> getRestuarants({
+    required int limit,
+    required int page,
+  }) async {
     final hasCachedData = await localDataSource.hasData();
 
     if (!hasCachedData) {
